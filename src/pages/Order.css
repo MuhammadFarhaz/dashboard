@@ -1,0 +1,10 @@
+/* MyTable.css */
+
+/* Adjust cell padding and font size for small screens */
+@media screen and (max-width: 767px) {
+    .MuiTableCell-root {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+  
