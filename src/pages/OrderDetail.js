@@ -40,7 +40,7 @@ const OrderDeatil = () => {
   const getDataDetail = async () => {
     try {
       const dataFilter = await axios.get(
-        `http://192.168.0.103:5001/groceries/getOrderDetail/${id}`
+        `http://localhost:5001/groceries/getOrderDetail/${id}`
       );
       console.log("data", dataFilter);
       setList([dataFilter?.data]);

@@ -62,7 +62,7 @@ export default function UpdateProduct() {
               fontWeight={"bold"}
               color={"black"}
             >
-              Update Grocery (Stock)
+              Update Product (Stock)
             </Typography>
           </Grid>
 

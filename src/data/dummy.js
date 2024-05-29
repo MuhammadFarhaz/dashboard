@@ -571,7 +571,7 @@ export const cartData = [
 export const chatData = [
   {
     image: avatar2,
-    message: "Muhammad Awais",
+    message: "Farhaz",
     desc: "Congratulate him",
     time: "9:08 AM",
   },

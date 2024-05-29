@@ -58,7 +58,7 @@ const MyTable = () => {
   const handleChange = async (orderId, value) => {
     try {
       const { data } = await axios.put(
-        `http://192.168.0.103:5001/groceries/orderUpdate`,
+        `http://localhost:5001/groceries/orderUpdate`,
         {
           _id: orderId,
           status: value,
@@ -74,7 +74,7 @@ const MyTable = () => {
   const confirmPayment = async (orderId, value) => {
     try {
       const { data } = await axios.put(
-        `http://192.168.0.103:5001/groceries/paymentupdate/${orderId}`,
+        `http://localhost:5001/groceries/paymentupdate/${orderId}`,
         {
           paymentStatus: value,
         }
@@ -95,7 +95,7 @@ const MyTable = () => {
   const refundPayment = async (orderId) => {
     try {
       const { data } = await axios.post(
-        `http://192.168.0.103:5001/groceries/refundpayment/${orderId}`
+        `http://localhost:5001/groceries/refundpayment/${orderId}`
       );
       toast.success("Refund user Payment");
       dispatch(getOrder());

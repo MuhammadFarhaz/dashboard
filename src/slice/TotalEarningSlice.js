@@ -7,7 +7,7 @@ import axios from "axios";
 const getEarning = createAsyncThunk("api/getEarning", async () => {
   try {
     const response = await axios.get(
-      "http://192.168.0.103:5001/groceries/totalearning"
+      "http://localhost:5001/groceries/totalearning"
     );
     console.log("earning", response?.data);
     return response.data;

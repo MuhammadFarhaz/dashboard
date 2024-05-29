@@ -19,12 +19,12 @@ export default function ProductAdd() {
   const [stock, setStock] = useState("");
   const [costPrice, setCostPrice] = useState("");
   const [prePrice, setPrePrice] = useState();
-  const [deal, setDeal] = useState();
+  const [deal, setDeal] = useState(null);
 
 
   const [category, setCategory] = useState("");
   const [description, setDiscription] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
 
   console.log(image);
 
@@ -52,10 +52,11 @@ export default function ProductAdd() {
     formData.append("size", size);
     formData.append("stock", stock);
     formData.append("prevPrice", prePrice || 0);
-    formData.append("deal", deal);
+    formData.append("deal", deal || null);
     formData.append("description", description);
-    console.log("formData",formData)
     try {
+      console.log("formData", formData)
+
       const userData = await axios.post(
         "http://localhost:5001/groceries/createGroceries",
         formData

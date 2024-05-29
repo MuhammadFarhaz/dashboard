@@ -7,7 +7,7 @@ import axios from "axios";
 const getOrder = createAsyncThunk("api/getOrder", async () => {
   try {
     const response = await axios.get(
-      "http://192.168.0.103:5001/groceries/getOrderDetail"
+      "http://localhost:5001/groceries/getOrderDetail"
     );
     console.log("res", response?.data);
     return response.data;
